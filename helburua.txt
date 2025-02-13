@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3Erronka - Sarrera</title>
+    <title>3Erronka - Helburua</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos globales */
@@ -130,15 +130,15 @@
 
     <!-- Encabezado -->
     <header>
-        <h1>Proiektuaren Sarrera: 3Erronka</h1>
+        <h1>Proiektuaren Helburua: 3Erronka</h1>
         <p>Automatizatutako piezen manipulazioa eta posizionamendua</p>
     </header>
 
     <!-- Barra de navegación -->
     <nav>
         <a href="index.html">Hasiera</a>
-        <a href="sarrera.html" class="active">Sarrera</a>
-        <a href="helburua.html">Helburua</a>
+        <a href="sarrera.html">Sarrera</a>
+        <a href="helburua.html" class="active">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
         <a href="egitura.html">Egitura</a>
         <a href="emaitzak.html">Emaitzak</a>
@@ -149,9 +149,24 @@
     <!-- Contenedor principal -->
     <div class="container">
         <section>
-            <h2>Proiektuaren Sarrera</h2>
-            <p>Gure zerraren estazioaren muntaketa pentsatu baino lehen bukatu dugu, orduan Aitorrek mahai elebadoraren proiektua gehitzeko proposatu digu. Hau gure zerraren estazioaren aurretik funtzionatuko du. Honek egur zatiak gure zerraren estazioan utziko ditu. Hasteko elementu guztiak plaka batera lotuta daude, elementu hauek gure estaziora pasa beharko ditugu.</p>
-            <p>Estazio honek zerra batekin egurra mozteko makina baten funtzionamendua simulatzean datza. Zerra beharrean KZko motorearekin egingo dugu eta hau mugitu ahal izateko motorea zurtoinik gabeko zilindro batera lotuko dugu. Gainera, gure estazioa eta beste talde baten estazioa jarraian egingo dute lan.</p>
+            <h2>Proiektuaren Helburua</h2>
+            <p>Helburua fabrikazio prozesuaren optimizazioa da, sentsore eta aktuatzaileekin piezen manipulazioa automatizatzea.</p>
+            
+            <h3>Prozesuaren Deskribapena</h3>
+            <p>Automatismoaren funtzionamendu nagusia egur zati bat eustea, moztea eta, ondoren, zulo bat egitea da puliatze prozesu baten bidez.</p>
+
+            <h4>1. Pausoa</h4>
+            <p>Lehenengo pausoa egur zati bat bere lekura jartzea da. Baldintza inicial guztiak betetzen badira, S1 seinalea ematean, B+ elektrobalbula aktibatuko da, eta bi pistoiak irtengo dira egur zatiari eutsiz.</p>
+
+            <h4>2. Pausoa</h4>
+            <p>Pistoiak irtetean, tenporizadore bat aktibatuko da. Denbora igaro ondoren, M1 motorra aktibatuko da.</p>
+
+            <h4>3. Pausoa</h4>
+            <p>M1 motorra aktibatzean, beste tenporizadore bat hasiko da, eta denbora igaro ondoren, A+ elektrobalbula aktibatuko du, motorra aurrerantz mugituz.</p>
+
+            <h4>4. Pausoa</h4>
+            <p>Pistoiak aurrerago iristean, motorra desaktibatuko da, eta pistoiak atzera egingo du. Atzerako mugimendua detektatzean, motor trifasikoa aktibatuko da denbora batez, tenporizadoreari esker.</p>
+            
             <a href="index.html" class="back-link">Itzuli Hasierara</a>
         </section>
     </div>

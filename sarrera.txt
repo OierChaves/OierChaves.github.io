@@ -150,8 +150,7 @@
     <div class="container">
         <section>
             <h2>Proiektuaren Sarrera</h2>
-            <p>Gure zerraren estazioaren muntaketa pentsatu baino lehen bukatu dugu, orduan Aitorrek mahai elebadoraren proiektua gehitzeko proposatu digu. Hau gure zerraren estazioaren aurretik funtzionatuko du. Honek egur zatiak gure zerraren estazioan utziko ditu. Hasteko elementu guztiak plaka batera lotuta daude, elementu hauek gure estaziora pasa beharko ditugu.</p>
-            <p>Estazio honek zerra batekin egurra mozteko makina baten funtzionamendua simulatzean datza. Zerra beharrean KZko motorearekin egingo dugu eta hau mugitu ahal izateko motorea zurtoinik gabeko zilindro batera lotuko dugu. Gainera, gure estazioa eta beste talde baten estazioa jarraian egingo dute lan.</p>
+            <p>Proiektuaren izena "3Erronka" da, eta helburu nagusia piezen manipulazio eta posizionamendu prozesu automatizatu bat garatzea da.</p>
             <a href="index.html" class="back-link">Itzuli Hasierara</a>
         </section>
     </div>

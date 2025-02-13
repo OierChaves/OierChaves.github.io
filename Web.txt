@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3Erronka - Sarrera</title>
+    <title>3Erronka - Proiektuaren Defentsa</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos globales */
@@ -119,25 +119,20 @@
             color: #007474;
             border-color: #007474;
         }
-
-        /* Estilo del enlace activo en la barra de navegación */
-        nav a.active {
-            background-color: #007474; /* Color para el enlace activo */
-        }
     </style>
 </head>
 <body>
 
     <!-- Encabezado -->
     <header>
-        <h1>Proiektuaren Sarrera: 3Erronka</h1>
+        <h1>Proiektuaren Defentsa: 3Erronka</h1>
         <p>Automatizatutako piezen manipulazioa eta posizionamendua</p>
     </header>
 
     <!-- Barra de navegación -->
     <nav>
         <a href="index.html">Hasiera</a>
-        <a href="sarrera.html" class="active">Sarrera</a>
+        <a href="sarrera.html">Sarrera</a>
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
         <a href="egitura.html">Egitura</a>
@@ -148,29 +143,21 @@
 
     <!-- Contenedor principal -->
     <div class="container">
+
+        <!-- Sección de introducción -->
         <section>
             <h2>Proiektuaren Sarrera</h2>
-            <p>Gure zerraren estazioaren muntaketa pentsatu baino lehen bukatu dugu, orduan Aitorrek mahai elebadoraren proiektua gehitzeko proposatu digu. Hau gure zerraren estazioaren aurretik funtzionatuko du. Honek egur zatiak gure zerraren estazioan utziko ditu. Hasteko elementu guztiak plaka batera lotuta daude, elementu hauek gure estaziora pasa beharko ditugu.</p>
-            <p>Estazio honek zerra batekin egurra mozteko makina baten funtzionamendua simulatzean datza. Zerra beharrean KZko motorearekin egingo dugu eta hau mugitu ahal izateko motorea zurtoinik gabeko zilindro batera lotuko dugu. Gainera, gure estazioa eta beste talde baten estazioa jarraian egingo dute lan.</p>
-            <a href="index.html" class="back-link">Itzuli Hasierara</a>
+            <p>Proiektuaren izena "3Erronka" da, eta helburu nagusia piezen manipulazio eta posizionamendu prozesu automatizatu bat garatzea da. Pieza zehatzak kokatzen dira sistema automatizatu batean, sentsore eta aktuatzaileak erabiliz, eta horrek egonkortasuna bermatzen du hurrengo urratsetarako.</p>
+            <p class="highlight">Proiektuaren helburu nagusia fabrikazio prozesuaren optimizazioa da, teknologia aurreratuak erabiliz, hala nola sentsore magnetikoak, balbulak eta PLC kontrol sistema.</p>
+            <a href="sarrera.html" class="back-link">Irakurri gehiago sobre la Sarrera...</a>
         </section>
+
     </div>
 
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2025 3Erronka - Proiektuaren Defentsa</p>
     </footer>
-
-    <script>
-        // Script para añadir la clase "active" al enlace correspondiente
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
-                link.classList.add('active');
-            }
-        });
-    </script>
 
 </body>
 </html>
