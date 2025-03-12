@@ -44,7 +44,7 @@
         nav a {
             color: #ffffff;
             font-size: 1.2em;
-            margin: 0 20px;
+            margin: 0 15px;
             text-decoration: none;
             padding: 8px 15px;
             border-radius: 5px;
@@ -52,6 +52,11 @@
         }
 
         nav a:hover {
+            background-color: #007474;
+        }
+
+        /* Enlace activo */
+        nav a.active {
             background-color: #007474;
         }
 
@@ -75,20 +80,9 @@
             color: #003d3d;
         }
 
-        section p, ul {
+        section p {
             line-height: 1.6;
             font-size: 1.1em;
-        }
-
-        ul {
-            margin-left: 20px;
-            list-style-type: disc;
-        }
-
-        .highlight {
-            background-color: #e6f7f7;
-            padding: 10px;
-            border-radius: 8px;
         }
 
         /* Pie de página */
@@ -104,7 +98,7 @@
             margin: 0;
         }
 
-        /* Estilo de enlace interno */
+        /* Enlace de regreso */
         .back-link {
             color: #004d4d;
             text-decoration: none;
@@ -118,11 +112,6 @@
         .back-link:hover {
             color: #007474;
             border-color: #007474;
-        }
-
-        /* Estilo del enlace activo en la barra de navegación */
-        nav a.active {
-            background-color: #007474; /* Color para el enlace activo */
         }
     </style>
 </head>
@@ -148,11 +137,11 @@
         <a href="ondorioak.html">Ondorioak</a>
     </nav>
 
-    <!-- Contenedor principal -->
+    <!-- Contenido principal -->
     <div class="container">
         <section>
             <h2>Proiektuaren Sarrera</h2>
-            <p>Proiektuaren izena "3Erronka" da, eta helburu nagusia piezen manipulazio eta posizionamendu prozesu automatizatu bat garatzea da.</p>
+            <p>Proiektuaren izena <strong>"3Erronka"</strong> da, eta helburu nagusia piezen manipulazio eta posizionamendu prozesu automatizatu bat garatzea da.</p>
             <a href="index.html" class="back-link">Itzuli Hasierara</a>
         </section>
     </div>
@@ -162,15 +151,15 @@
         <p>&copy; 2025 3Erronka - Proiektuaren Defentsa</p>
     </footer>
 
+    <!-- Script para resaltar el enlace activo -->
     <script>
-        // Script para añadir la clase "active" al enlace correspondiente
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo del enlace
-            if (linkPage === currentPage) {
-                link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
-            }
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
 
