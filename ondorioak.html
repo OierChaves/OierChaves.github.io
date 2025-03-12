@@ -145,7 +145,7 @@
         <a href="emaitzak.html">Emaitzak</a>
         <a href="erronkak.html">Erronkak</a>
         <a href="larrialdia.html">Larrialdia</a>
-        <a href="ondorioak.html" class="active">Ondorioak</a>
+        <a href="ondorioak.html">Ondorioak</a>
     </nav>
 
     <!-- Contenedor principal -->
@@ -167,8 +167,9 @@
         const currentPage = window.location.pathname.split('/').pop();
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
-                link.classList.add('active');
+            const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo del enlace
+            if (linkPage === currentPage) {
+                link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
             }
         });
     </script>
