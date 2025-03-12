@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3Erronka - Egitura</title>
+    <title>3Erronka - Hasiera</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos globales */
@@ -119,11 +119,6 @@
             color: #007474;
             border-color: #007474;
         }
-
-        /* Estilo del enlace activo en la barra de navegación */
-        nav a.active {
-            background-color: #007474; /* Color para el enlace activo */
-        }
     </style>
 </head>
 <body>
@@ -137,12 +132,14 @@
     <!-- Barra de navegación -->
     <nav>
         <a href="index.html" class="active">Hasiera</a>
+        <a href="sarrerak_irteerak.html">Sarrerak/Irteerak</a>
         <a href="sarrera.html">Sarrera</a>
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
         <a href="egitura.html">Egitura</a>
         <a href="emaitzak.html">Emaitzak</a>
         <a href="erronkak.html">Erronkak</a>
+        <a href="larrialdia.html">Larrialdia</a>
         <a href="ondorioak.html">Ondorioak</a>
     </nav>
 
@@ -164,17 +161,6 @@
     <footer>
         <p>&copy; 2025 3Erronka - Proiektuaren Defentsa</p>
     </footer>
-
-    <script>
-        // Script para añadir la clase "active" al enlace correspondiente
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
-                link.classList.add('active');
-            }
-        });
-    </script>
 
 </body>
 </html>
