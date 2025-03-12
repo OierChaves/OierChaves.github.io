@@ -142,7 +142,7 @@
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
         <a href="bihurgailua.html">Bihurgailua</a>
-        <a href="emaitzak.html"class="active">Emaitzak</a>
+        <a href="emaitzak.html" class="active">Emaitzak</a>
         <a href="erronkak.html">Erronkak</a>
         <a href="larrialdia.html">Larrialdia</a>
         <a href="ondorioak.html">Ondorioak</a>
@@ -167,7 +167,8 @@
         const currentPage = window.location.pathname.split('/').pop();
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
+            const linkPage = link.getAttribute('href').split('/').pop(); // Obtenemos el nombre del archivo
+            if (linkPage === currentPage) {
                 link.classList.add('active');
             }
         });
