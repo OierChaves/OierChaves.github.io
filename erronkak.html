@@ -143,7 +143,7 @@
         <a href="tresnak.html">Tresnak</a>
         <a href="bihurgailua.html">Bihurgailua</a>
         <a href="emaitzak.html">Emaitzak</a>
-        <a href="erronkak.html"class="active">Erronkak</a>
+        <a href="erronkak.html" class="active">Erronkak</a>
         <a href="larrialdia.html">Larrialdia</a>
         <a href="ondorioak.html">Ondorioak</a>
     </nav>
@@ -164,11 +164,12 @@
 
     <script>
         // Script para añadir la clase "active" al enlace correspondiente
-        const currentPage = window.location.pathname.split('/').pop();
+        const currentPage = window.location.pathname.split('/').pop(); // Obtiene el nombre del archivo actual
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
-                link.classList.add('active');
+            const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo del enlace
+            if (linkPage === currentPage) {
+                link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
             }
         });
     </script>
