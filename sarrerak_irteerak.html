@@ -63,12 +63,14 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Proiektuaren Sarrerak/Irteerak</h1>
     </header>
+
     <nav>
         <a href="index.html">Hasiera</a>
-        <a href="sarrerak_irteerak.html" class="active">Sarrerak/Irteerak</a>
+        <a href="sarrerak_irteerak.html">Sarrerak/Irteerak</a>
         <a href="sarrera.html">Sarrera</a>
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
@@ -78,14 +80,28 @@
         <a href="larrialdia.html">Larrialdia</a>
         <a href="ondorioak.html">Ondorioak</a>
     </nav>
+
     <div class="container">
         <section>
             <img src="Entradas_Salidas.png" alt="Entradas y salidas" width="700" height="500">
         </section>
     </div>
+
     <footer>
         <p>&copy; 2025 3Erronka - Proiektuaren Defentsa</p>
     </footer>
+
+    <script>
+        // Script para añadir la clase "active" al enlace correspondiente
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo del enlace
+            if (linkPage === currentPage) {
+                link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
+            }
+        });
+    </script>
+
 </body>
 </html>
-
