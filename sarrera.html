@@ -131,14 +131,14 @@
     <!-- Encabezado -->
     <header>
         <h1>Proiektuaren Sarrera: 3Erronka</h1>
-        <p>Automatizatutako piezen manipulazioa eta posizionamendua</p>
+        <p>Automatizatutako piezen manipulazioa eta posizionamendu</p>
     </header>
 
     <!-- Barra de navegación -->
     <nav>
         <a href="index.html">Hasiera</a>
         <a href="sarrerak_irteerak.html">Sarrerak/Irteerak</a>
-        <a href="sarrera.html" class="active">Sarrera</a>
+        <a href="sarrera.html">Sarrera</a>
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
         <a href="bihurgailua.html">Bihurgailua</a>
@@ -167,8 +167,9 @@
         const currentPage = window.location.pathname.split('/').pop();
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
-                link.classList.add('active');
+            const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo del enlace
+            if (linkPage === currentPage) {
+                link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
             }
         });
     </script>
