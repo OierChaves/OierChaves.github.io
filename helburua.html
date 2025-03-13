@@ -124,6 +124,26 @@
         nav a.active {
             background-color: #007474; /* Color para el enlace activo */
         }
+
+        /* Media queries para adaptabilidad en pantallas pequeñas */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -151,7 +171,7 @@
     <div class="container">
         <section>
             <h2>Proiektuaren Helburua</h2>
-            <img src="grafcet1.PNG" alt="Entradas y salidas" width="600" height="500">
+            <img src="grafcet1.PNG" alt="Diagrama de flujo de entradas y salidas del proceso" width="600" height="500">
             <p>Helburua fabrikazio prozesuaren optimizazioa da, sentsore eta aktuatzaileekin piezen manipulazioa automatizatzea.</p>
             
             <h3>Prozesuaren Deskribapena</h3>
@@ -160,7 +180,7 @@
             <h3>Mesak Elevatzailea eta Detektore Fotoelektrikoa</h3>
             <p>Mesak elevatzailea, piezak detektatzeko eta kokatzeko erabiltzen da. Detektore fotoelektriko bat erabiltzen du piezak detektatzeko, eta hauek irakurtzen direnean, mesa elevatzailea piezaren posizioa altxatuz zehazten du. Piezaren presentzia egiaztatzean, mesa automatikoki altxatzen da eta pieza bere kokalekura igotzen du, hauek beste prozesuetan erabil daitezen. Horrela, piezak behar bezala manipulatzen dira prozesuaren barruan.</p>
             
-            <a href="Web.html" class="back-link">Itzuli Hasierara</a>
+            <a href="index.html" class="back-link">Itzuli Hasierara</a>
         </section>
     </div>
 
