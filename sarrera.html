@@ -127,7 +127,7 @@
     <nav>
         <a href="index.html">Hasiera</a>
         <a href="sarrerak_irteerak.html">Sarrerak/Irteerak</a>
-        <a href="sarrera.html"class="active">Sarrera</a>
+        <a href="sarrera.html" class="active">Sarrera</a>
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
         <a href="bihurgailua.html">Bihurgailua</a>
@@ -155,7 +155,8 @@
         document.addEventListener("DOMContentLoaded", function () {
             const currentPage = window.location.pathname.split('/').pop();
             document.querySelectorAll('nav a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
+                const linkPage = link.getAttribute('href').split('/').pop(); // Asegura que compara el nombre de la página
+                if (linkPage === currentPage) {
                     link.classList.add('active');
                 }
             });
