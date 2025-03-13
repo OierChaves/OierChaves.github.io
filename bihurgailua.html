@@ -51,7 +51,7 @@
             transition: background-color 0.3s;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             background-color: #007474;
         }
 
@@ -119,11 +119,6 @@
             color: #007474;
             border-color: #007474;
         }
-
-        /* Estilo del enlace activo en la barra de navegación */
-        nav a.active {
-            background-color: #007474; /* Color para el enlace activo */
-        }
     </style>
 </head>
 <body>
@@ -151,20 +146,20 @@
     <div class="container">
         <section>
             <h2>Bihurgailuen Funtzionamendua</h2>
-            <p>Bihurgailu bat (edo variadore) motor baten abiadura eta momentu kontrolatzeko erabiltzen den gailua da. Elektrizitateko hodiak eta softwarearen bidez motorren errendimendua modu egokian egokitu daiteke. Hau, besteak beste, aplikazioetan erabiltzen da motorren funtzionamendua hobetzeko, energia aurrezteko eta makinaren bizitza luzatzeko.</p>
+            <p>Bihurgailu bat motor baten abiadura eta momentua kontrolatzeko erabiltzen den gailua da. Elektrizitatearen eta softwarearen bidez, motorren errendimendua optimizatzen da.</p>
 
             <h3>Bihurgailuen erabilera nagusiak:</h3>
             <ul>
-                <li><strong>Abiadura erregulazioa:</strong> Motorren abiadura aldatzea beharrezkoa denean, bihurgailuak erabil daitezke.</li>
-                <li><strong>Energia aurrezpena:</strong> Motorren abiadura egokitzeko, energiaren kontsumoa murriztu daiteke.</li>
-                <li><strong>Momentu kontrola:</strong> Motorrek momentu handia eskatzen duten aplikazioetan, bihurgailuak erabil daitezke.</li>
-                <li><strong>Gaitasun handiko funtzionamendua:</strong> Bihurgailuak motorren funtzionamendua optimizatzeko aukera ematen du, horrela aplikazioen errendimendua hobetuz.</li>
+                <li><strong>Abiadura erregulazioa:</strong> Motorren abiadura beharrezkoa den momentuan egokitu daiteke.</li>
+                <li><strong>Energia aurrezpena:</strong> Kontsumoaren murrizketa lortzen da.</li>
+                <li><strong>Momentu kontrola:</strong> Momentu handia behar duten aplikazioetarako.</li>
+                <li><strong>Funtzionamendu optimizatua:</strong> Motorren errendimendua hobetzen du.</li>
             </ul>
 
             <h3>Variadorearen funtzionamendua:</h3>
-            <p>Bihurgailuak motor baten sarrera eta irteera tentsioak aldatu egiten ditu, eta horren bidez motoraren abiadura eta momentuaren kontrola lortzen da. Hau guztia elektronikaren eta potentzia elektronikoen bidez egiten da. Motor mota desberdinetan aplikatu daiteke, hala nola motor asinkronoetan eta motor DCetan, eta baita hainbat aplikaziotan ere, hala nola garraio sistemetan, ponpaketan eta aireztapen sistemetan.</p>
+            <p>Bihurgailuak motor baten sarrera eta irteera tentsioak kontrolatzen ditu, abiadura eta momentua egokituz.</p>
 
-            <a href="Web.html" class="back-link">Itzuli Hasierara</a>
+            <a href="index.html" class="back-link">Itzuli Hasierara</a>
         </section>
     </div>
 
@@ -174,13 +169,14 @@
     </footer>
 
     <script>
-        // Script para añadir la clase "active" al enlace correspondiente
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
-                link.classList.add('active');
-            }
+        // Script para marcar el enlace activo correctamente
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
         });
     </script>
 
