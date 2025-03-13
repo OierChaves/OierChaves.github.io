@@ -70,7 +70,7 @@
 
     <nav>
         <a href="index.html">Hasiera</a>
-        <a href="sarrerak_irteerak.html"class="active">Sarrerak/Irteerak</a>
+        <a href="sarrerak_irteerak.html">Sarrerak/Irteerak</a>
         <a href="sarrera.html">Sarrera</a>
         <a href="helburua.html">Helburua</a>
         <a href="tresnak.html">Tresnak</a>
@@ -92,13 +92,16 @@
 
     <script>
         // Script para añadir la clase "active" al enlace correspondiente
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo del enlace
-            if (linkPage === currentPage) {
-                link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
-            }
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split('/').pop(); // Obtiene el nombre de la página actual
+            const navLinks = document.querySelectorAll('nav a'); // Selecciona todos los enlaces de navegación
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href').split('/').pop(); // Obtiene el nombre del archivo de cada enlace
+                if (linkPage === currentPage) {
+                    link.classList.add('active'); // Añade la clase "active" al enlace correspondiente
+                }
+            });
         });
     </script>
 
